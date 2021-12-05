@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Przykład 23 - Wysyłanie maila z AJAX i PHP</title>
+
+    <style>
+
+        #message {
+            box-sizing: border-box;
+            display: none;
+            width: 300px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 1px #000 solid;
+
+            line-height: 22px;
+            text-align: center;
+        }
+
+        #message.error {
+            display: block;
+            border-color: #FA7382;
+
+            color: #FA3543;
+        }
+
+        #message.success {
+            display: block;
+            border-color: #9FFA8A;
+
+            color: #4BE542;
+        }
+
+        form {
+            width: 300px;
+            margin: 40px auto;
+        }
+
+        .inputField {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .inputField input,
+        .inputField textarea {
+            box-sizing: border-box;
+            width: 300px;
+            height: 40px;
+            padding: 0 20px;
+            border: 1px #C4C4C4 solid;
+            border-radius: 10px;
+
+            font: 13px/1 Arial, Tahoma, sans-serif;
+            color: #6E6E6E;
+        }
+
+        .inputField textarea {
+            height: 180px;
+            padding: 20px;
+
+            line-height: 20px;
+        }
+
+        .inputField button {
+            float: right;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Przykład 23 - Wysyłanie maila z AJAX i PHP</h1>
+
+    <div id="message"></div>
+
+    <form id="form" action="mail.php" method="POST">
+        <div class="inputField">
+            <input type="text" name="your-name" placeholder="Twoje imię">
+        </div>
+
+        <div class="inputField">
+            <input type="text" name="your-email" placeholder="Twój e-mail">
+        </div>
+
+        <div class="inputField">
+            <textarea name="your-message" placeholder="Twoja wiadomość"></textarea>
+        </div>
+
+        <div class="inputField">
+            <button type="submit">Wyślij</button>
+        </div>
+    </form>
+
+<script src="js/ajax.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
